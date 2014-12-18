@@ -48,7 +48,11 @@ sub run {
     my @args = @{ $args{args} // [] };
     push @cmd, '--', @args if @args;
 
-    system { $cmd[0] } @cmd;
+    my $res = system { $cmd[0] } @cmd;
+    if ($res) {
+        warn explain_child_error({prog=>$args{prog}});
+    }
+    $res;
 }
 
 1;
