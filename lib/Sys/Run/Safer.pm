@@ -128,5 +128,29 @@ all kinds of child-controlling features.
 
 Perl's C<system()> documentation (C<perldoc -f system>).
 
-L<IPC::System::Simple>.
+There are lots and lots of CPAN modules dealing with running external commands.
+Some offer only improvement/alternative for Perl's C<system()>, others provide
+extra features (from feeding input and capturing output, timeout, adding
+logging/debugging, retry, and so on). I'll limit here to listing the modules of
+the former group:
 
+=over
+
+=item * L<IPC::System::Simple>
+
+Provides a separate function C<systemx()> which never invokes the shell. Also
+provides run() and runx() which dies on failure instead of just returning
+non-zero.
+
+=item * L<IPC::Run>
+
+Recommended over the core L<IPC::Cmd>. C<IPC::Run>'s C<run()> won't run shell if
+you feed it arrayref (e.g. C<<run ["ls"]>> instead of C<<run "ls">> even though
+there is only one element in the array (i.e. C<<run ["ls -l"]>> or C<<run ["ls |
+sort"]>> won't work). While C<IPC::Cmd>'s C<run> will still run shell in the
+latter case, just like Perl's C<system()>.
+
+Note that C<IPC::Run> also has extra features for controlling the child process,
+and is used by some other modules as a backend.
+
+=back
