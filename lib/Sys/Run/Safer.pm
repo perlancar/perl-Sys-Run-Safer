@@ -119,9 +119,6 @@ use, into L<Proc::Govern>. The latter module supports (or will/should support)
 all kinds of child-controlling features.
 
 
-=head1 TODO
-
-
 =head1 SEE ALSO
 
 [1] L<http://www.defensecode.com/public/DefenseCode_Unix_WildCards_Gone_Wild.txt>
