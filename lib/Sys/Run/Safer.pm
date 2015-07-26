@@ -142,10 +142,10 @@ non-zero.
 =item * L<IPC::Run>
 
 Recommended over the core L<IPC::Cmd>. C<IPC::Run>'s C<run()> won't run shell if
-you feed it arrayref (e.g. C<<run ["ls"]>> instead of C<<run "ls">> even though
-there is only one element in the array (i.e. C<<run ["ls -l"]>> or C<<run ["ls |
-sort"]>> won't work). While C<IPC::Cmd>'s C<run> will still run shell in the
-latter case, just like Perl's C<system()>.
+you feed it arrayref (e.g. C<< run ["ls"] >> instead of C<< run "ls" >> even
+though there is only one element in the array (i.e. C<< run ["ls -l"] >> or C<<
+run ["ls | sort"] >> won't work). While C<IPC::Cmd>'s C<run> will still run
+shell in the latter case, just like Perl's C<system()>.
 
 Note that C<IPC::Run> also has extra features for controlling the child process,
 and is used by some other modules as a backend.
