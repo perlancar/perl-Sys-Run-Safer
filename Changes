@@ -1,4 +1,4 @@
-0.04    2015-09-06 (PERLANCAR)
+0.04    2015-09-06  Released-By: PERLANCAR
 
 	- No functional changes.
 
@@ -7,20 +7,20 @@
 	  requirement.
 
 
-0.03    2014-12-24 (PERLANCAR)
+0.03    2014-12-24  Released-By: PERLANCAR
 
 	- No functional changes.
 
 	- Mention some other alternative modules [RT#101074].
 
 
-0.02    2014-12-18 (PERLANCAR)
+0.02    2014-12-18  Released-By: PERLANCAR
 
 	- No functional changes.
 
 	- [pod] Fix example in Synopsis.
 
 
-0.01     2014-12-18 (PERLANCAR)
+0.01     2014-12-18  Released-By: PERLANCAR
 
          - First release.
